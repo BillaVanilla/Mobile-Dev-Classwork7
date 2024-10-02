@@ -16,6 +16,13 @@ _FadingTextAnimationState createState() => _FadingTextAnimationState();
 }
 class _FadingTextAnimationState extends State<FadingTextAnimation> {
 bool _isVisible = true;
+
+void toggleSonic(){
+  setState((){
+
+  });
+}
+
 void toggleVisibility() {
 setState(() {
 _isVisible = !_isVisible;
@@ -30,9 +37,9 @@ title: Text('Fading Text Animation'),
 body: Center(
 child: AnimatedOpacity(
 opacity: _isVisible ? 1.0 : 0.0,
-duration: Duration(seconds: 1),
+duration: Duration(seconds: 3),
 child: Text(
-'Hello, Flutter!',
+'Gotta Go Fast!!!',
 style: TextStyle(fontSize: 24),
     ),
   ),
@@ -40,6 +47,7 @@ style: TextStyle(fontSize: 24),
 floatingActionButton: FloatingActionButton(
 onPressed: toggleVisibility,
 child: Icon(Icons.play_arrow),
+backgroundColor: Colors.blue,
       ),
     );
   }
